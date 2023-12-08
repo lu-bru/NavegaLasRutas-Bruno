@@ -1,5 +1,7 @@
 import { Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
+
 const NavMenuButton = () => {
   return (
     <Menu>
@@ -7,10 +9,15 @@ const NavMenuButton = () => {
         Categorías
       </MenuButton>
       <MenuList>
-        <MenuItem>Tropicales</MenuItem>
-        <MenuItem>De Estación</MenuItem>
-        <MenuItem>Cítricas</MenuItem>
-        <MenuItem>Secas</MenuItem>
+        <MenuItem>
+          <Link to={"/category/acidas"}>Ácidas</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to={"/category/dulces"}>Dulces</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to={"/category/neutras"}>Neutras</Link>
+        </MenuItem>
       </MenuList>
     </Menu>
   );
